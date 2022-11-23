@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		fetch("http://localhost:4000/students")
+		.then((res)=>{
+         return res.json()
+		})
+		.then((jsonres)=>{
+        console.log(jsonres)
+		})
+	function display(users){
+		///console.log(users)
+		for(var i=0;i<users.length;i++){
+			document.getElementById("userDetais").innerHTML+=
+			`
+		<div>
+		<p>${users[i].stdname}</p>
+		</div>
+		`
+		}
+	}
+	</script>
+
+</body>
+</html>
